@@ -1,0 +1,280 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=Gabarito:wght@400;500;600;700;800;900&family=Heebo:wght@200;300;400;500;600;700;800;900&family=Lato:wght@300;400;700;900&family=Metrophobic&family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,300&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,300;1,700&family=Young+Serif&display=swap');
+
+:root{
+--green-color:#137333;
+--primary-color: #f6831d;
+--white-color:white;
+--secondary-color: #099b7a;
+--black-color:black;
+--h1-font: 'Bowlby One SC', sans-serif;
+--p-font: 'Nunito Sans', sans-serif;
+--nav-font: 'Poppins', sans-serif;
+--h2-font: 'Poppins', sans-serif;
+--p2-font: 'Gabarito', sans-serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+  font-family: var(--p-font);
+  background: linear-gradient(to right, #137333, #0c4f27);
+  /* background-image: url(./assets/design.jpg); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header{
+  background-color: var(--green-color);
+}
+
+  /* Desktop navbar styles */
+  .desktop-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .desktop-navbar h1 {
+    margin: 0;
+    color: var(--primary-color);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+  }
+  .desktop-navbar h1 span.guide{
+    transition: 0.4s ease-in-out;
+  }
+  .desktop-navbar h1 span.guide:hover{
+    color: var(--white-color);
+  }
+  .desktop-navbar nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .desktop-navbar nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .desktop-navbar nav li {
+    display: inline-block;
+    font-family: var(--p-font);
+    font-size: 18px;
+  }
+  
+  .desktop-navbar nav a {
+    padding: 10px;
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: 0.4s ease-in-out;
+  }
+  .desktop-navbar nav a:hover {
+    padding: 10px;
+    text-decoration: none;
+    color: var(--white-color);
+  }
+
+  .user-input-section h2{
+    color: var(--primary-color);
+  }
+  .main-section{
+     backdrop-filter: blur(5px);
+     box-shadow: 0 0 10px 5px #FFCA28;
+     width: 40%;
+     margin: 10px auto;
+     padding: 20px;
+     border-radius: 5px;
+  }
+  .main-section h2{
+    text-align: center;
+    color: var(--primary-color);
+  }
+  .user-text{
+    width: 100%;
+    outline: none;
+    padding-left: 20px;
+    padding-top: 20px;
+    border: none;
+    font-size: 20PX;
+    font-family: var(--p2-font);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    resize: none;
+  }
+  .words-to-redact{
+    width: 90%;
+    margin-left: 20px;
+    height: 50px;
+    outline: none;
+    font-family: var(--p2-font);
+    border: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-left: 20px;
+    padding-top: 5px;
+  }
+  .redaction-character{
+    width: 70%;
+    margin-left: 60px;
+    height: 50px;
+    outline: none;
+    font-family: var(--p2-font);
+    border: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-left: 20px;
+    padding-top: 5px;
+  }
+  #redactButton{
+    padding: 10px 30px;
+    transition: 0.4s ease-in-out;
+    border:none;
+    border-radius:5px
+  }
+  
+  #redactButton:hover{
+    color: white;
+    background-color: var(--primary-color);
+    transition: 0.4s ease-in-out;
+  }
+  
+  .buttons{
+    margin-top: 20px;
+    margin-left: 120px;
+  }
+  .refresh-input{
+    padding-left: 50px;
+    margin-top: 40px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+  }
+  .refresh-input:hover{
+    color:white;
+  }
+  .outputs{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  .redacted-section{
+    width: 60%;
+  }
+  .redacted-section h2{
+    color: var(--white-color);
+  }
+  
+  #stats-section{
+    width: 40%;
+  }
+  #stats-section p{
+    color: var(--white-color);
+  }
+  #redactedText{
+    width: 100%;
+    resize: none;
+    outline: none;
+    border: none;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-left: 20px;
+    padding-top: 18px;
+    font-size: 18px;
+    font-family: var(--p2-font);
+  }
+  .btns-1{
+    padding: 10px 30px;
+    margin-top: 10px;
+    border: none;
+    color: #f6831d;
+  }
+  footer{
+    text-align: center;
+    background-color: var(--green-color);
+  }
+  footer p{
+    color: var(--primary-color);
+    font-family: var(--p2-font);
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  /* Media queries */
+  @media screen and (max-width: 768px) {
+  
+  
+    .desktop-navbar nav ul li {
+     font-size:16px;
+    }
+    .desktop-navbar h1 {
+      font-size: 20px;
+    }
+    .main-section{
+      width: 90%;
+      margin-top: 10px;
+    }
+    .outputs{
+      flex-direction: column;
+      gap: 10px;
+    }
+    .redacted-section{
+      width: 90%;
+     
+    }
+    .redacted-section h2{
+      font-size: 26px;
+      color: var(--primary-color);
+    }
+    .redacted-section p{
+      font-size: 18px;
+    }
+    .redacted-section button{
+      font-size: 18px;
+    }
+    .redacted-section button:hover{
+      background-color: var(--primary-color);
+    }
+    .buttons{
+      margin-left: 93px;
+    }
+    .buttons .refresh-input{
+      display: block;
+      margin-top: 8px;
+    }
+    
+    #stats-section{
+      padding: 20px 50px;
+      width: 100%;
+      backdrop-filter: blur(5px);
+      font-size: 15px;
+      
+  }
+  .btns-1{
+    padding: 10px 30px;
+    margin-top: 10px;
+    border: none;
+  }
+}
+@media screen and (max-width: 480px) {
+    .main-section{
+      width: 100%;
+    }
+  }
+@media screen and (max-width: 320px) {
+    .main-section{
+      width: 95%;
+    }
+  }

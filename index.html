@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redact Guard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/JuTeLabsMainLogo.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+    <div class="desktop-navbar container" >
+      <h1>Redact<span class="guide">Guard</span></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="feature.html">Features</a></li>
+          <li><a href="price.html">Pricing</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+    <main>
+      <div class="main-section container">
+          <section class="user-input-section">
+            <h2>Write Little About YourSelf</h2>
+            <textarea class="user-text" rows="6" placeholder="Enter your text here..."></textarea>
+        </section>
+        
+        <section>
+            <h2>Enter The Texts You Wanna Hide</h2>
+            <input type="text" class="words-to-redact" placeholder="Enter words to redact (space-separated)">
+        </section>
+        <section class="redaction-section">
+          <h2>Redaction Character</h2>
+          <input type="text" class="redaction-character" placeholder="Enter redaction character of your choice"><br>
+          <div class="buttons">
+            <button onclick="myRedactTextApp()" id="redactButton">Redact Now</button> 
+            <button  class="refresh-input">Redact Now</button> 
+          </span>
+          </div>
+        </section>
+      </div>
+        
+      <div class="outputs container">
+          <section class="redacted-section">
+            <h2>Redacted Text</h2>
+            <textarea id="redactedText" rows="6" readonly></textarea>
+          </section>
+          <div id="stats-section">
+            <p>Words Scanned: <button class="btns-1" id="wordsScanned">0</button></p>
+            <p>Words Matched: <button class="btns-1" id="wordsMatched">0</button></p>
+            <p>Characters Scrambled: <button class="btns-1" id="charactersScrambled">0</button></p>
+            <p>Time Taken: <button class="btns-1" id="timeTaken">0 seconds</button></p>
+          </div>
+      </div>
+  
+  </main>
+    <footer>
+        <p> &copy; RedactGuard | 2023 - Designed By <a href="#">JuTeLabs</a></p>
+    </footer> 
+    <script src="script.js"></script>
+</body>
+</html>
