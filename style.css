@@ -257,7 +257,7 @@ header{
       background-color: var(--primary-color);
     }
     .buttons{
-      margin-left: 93px;
+      margin-left: 113px;
     }
     .buttons .refresh-input{
       display: block;
@@ -282,7 +282,7 @@ header{
       width: 100%;
     }
     .buttons{
-      margin-left: 143px;
+      margin-left: 113px;
     }
   }
 @media screen and (max-width: 320px) {

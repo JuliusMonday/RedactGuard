@@ -7,8 +7,10 @@ window.onload = function() {
     }
 };
 
-let individualNames = document.querySelector("#user-names").textContent = `Hi ${userName}`;
-
+let individualNames = document.querySelector("#user-names").textContent = `Hi ${userName},`;
+if (userName ==null){
+    individualNames = document.querySelector("#user-names").textContent = `Hi Guest,`;
+}
 
 // My Redact text application function
 function myRedactTextApp() {
@@ -39,7 +41,7 @@ function myRedactTextApp() {
     // Check if any word in userTextToBeRedacted is not present in the input
     const notFoundWords = userTextToBeRedacted.filter(word => !words.includes(word));
     if (notFoundWords.length > 0) {
-        document.getElementById("redactedText").value += `\n${individualNames}The words/word ::${notFoundWords.join(', ')}:: was not found after thorough scanning😢😢🤦‍♂️`;
+        document.getElementById("redactedText").value += `\n${individualNames} the words/word ::${notFoundWords.join(', ')}:: was not found after thorough scanning😢😢🤦‍♂️`;
         document.getElementById("redactedText").value += `\nPlease check the spelling and try again.`;
         document.getElementById("redactedText").style.color = "#f6831d";
         document.getElementById("redactedText").style.fontWeight = "bold";
