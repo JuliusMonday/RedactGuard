@@ -1,21 +1,16 @@
-// Prompt the user to enter their name when the page loads
+// Prompting the user to enter their name when the page loads
+const userName = prompt("Please enter your name:");
 window.onload = function() {
-    const userName = prompt("Please enter your name:");
-    if (userName) {
-        alert(`Welcome, ${userName}! You are welcome to Redact Guard; you are safe.`);
+    let myPrompter = userName;
+    if (myPrompter) {
+        alert(`Welcome, ${myPrompter}! You are welcome to Redact Guard; you are safe.`);
     }
 };
-// My Menu actions
-const menuIcon = document.querySelector(".menu-icon");
-menuIcon.addEventListener("click", function(){
-    const sideMenu = document.querySelector(".mobile-navbar");
-    sideMenu.style.display = "flex";
-});
-const menuIcon2 = document.querySelector(".close-icon");
-menuIcon2.addEventListener("click", function(){
-    const sideMenu = document.querySelector(".mobile-navbar");
-    sideMenu.style.display = "none";
-});
+
+let individualNames = document.querySelector("#user-names").textContent = `Hi ${userName}`;
+
+
+// My Redact text application function
 function myRedactTextApp() {
     const startTime = new Date(); // Starting time
 
@@ -27,7 +22,6 @@ function myRedactTextApp() {
     const redactedWords = [];
     let matchedWords = 0;
     let totalScrambledCharacters = 0;
-    let totalTimeForTheProgram = 0;
 
     words.forEach(word => {
         if (userTextToBeRedacted.includes(word)) {
@@ -45,12 +39,15 @@ function myRedactTextApp() {
     // Check if any word in userTextToBeRedacted is not present in the input
     const notFoundWords = userTextToBeRedacted.filter(word => !words.includes(word));
     if (notFoundWords.length > 0) {
-        document.getElementById("redactedText").value += `\nWords not found: ${notFoundWords.join(', ')}`;
+        document.getElementById("redactedText").value += `\n${individualNames}The words/word ::${notFoundWords.join(', ')}:: was not found after thorough scanning😢😢🤦‍♂️`;
+        document.getElementById("redactedText").value += `\nPlease check the spelling and try again.`;
+        document.getElementById("redactedText").style.color = "#f6831d";
+        document.getElementById("redactedText").style.fontWeight = "bold";
     }
 
     // Calculate the total time taken
     const endTime = new Date();
-    totalTimeForTheProgram = (endTime - startTime) / 1000; // in seconds
+    const totalTimeForTheProgram = (endTime - startTime) / 1000; // in seconds
 
     const totalWordsScanned = document.querySelector("#wordsScanned");
     const totalMatchedWords = document.querySelector("#wordsMatched");
@@ -61,19 +58,11 @@ function myRedactTextApp() {
     totalMatchedWords.textContent = matchedWords;
     totalCharactersScrambled.textContent = totalScrambledCharacters;
     totalTimeTaken.textContent = `${totalTimeForTheProgram.toFixed(3)} seconds`;
-   
 }
 
-// Prompt the user to enter their name when the page loads
-window.onload = function() {
-    const userName = prompt("Please enter your name:");
-    if (userName) {
-        alert(`Welcome, ${userName}! You are welcome to Redact Guard; you are safe.`);
-    }
-};
-
 // Add an event listener to the "Refresh" button
-document.getElementsByClassName("refresh-input").addEventListener("click", function() {
+const refreshButton = document.querySelector(".refresh-input");
+refreshButton.addEventListener("click", function () {
     document.querySelector(".user-text").value = ""; // Clear user input text
     document.querySelector(".words-to-redact").value = ""; // Clear redacted words input
     document.querySelector(".redaction-character").value = ""; // Clear redaction character input
@@ -82,6 +71,4 @@ document.getElementsByClassName("refresh-input").addEventListener("click", funct
     document.querySelector("#wordsMatched").textContent = "0"; // Reset matched words count
     document.querySelector("#charactersScrambled").textContent = "0"; // Reset scrambled characters count
     document.querySelector("#timeTaken").textContent = "0 seconds"; // Reset time taken
-});
-
-
+}); 
