@@ -289,4 +289,10 @@ header{
     .main-section{
       width: 95%;
     }
+    .buttons{
+      margin-left: 113px;
+    }
+.redacted-section{
+  width: 95%;
   }
+}
