@@ -8,7 +8,7 @@ window.onload = function() {
 };
 
 let individualNames = document.querySelector("#user-names").textContent = `Hi ${userName},`;
-if (userName ==null){
+if (userName == null || userName == ""){
     individualNames = document.querySelector("#user-names").textContent = `Hi Guest,`;
 }
 
