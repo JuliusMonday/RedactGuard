@@ -220,6 +220,10 @@ header{
     font-size: 20px;
     padding: 15px;
   }
+  footer p a{
+    color: var(--primary-color);
+    text-decoration: none;
+  }
 
   /* Media queries */
   @media screen and (max-width: 768px) {
@@ -295,4 +299,22 @@ header{
 .redacted-section{
   width: 95%;
   }
+}
+@media (min-width: 768px) and (max-width: 1099px) {
+    .main-section{
+      width: 95%;
+    }
+    .buttons{
+      margin-left: 113px;
+    }
+   
+    .redacted-section h2{
+      font-size: 26px;
+    }
+    .redacted-section p{
+      font-size: 18px;
+    }
+    .buttons{
+      margin-left: 13px;
+    }
 }
