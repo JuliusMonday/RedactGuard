@@ -3,7 +3,7 @@ const userName = prompt("Please enter your name:");
 window.onload = function() {
     let myPrompter = userName;
     if (myPrompter) {
-        alert(`Welcome, ${myPrompter}! You are welcome to Redact Guard; you are safe.`);
+        alert(`Hi, ${myPrompter}! You are welcome to Redact Guard; you are safe Here.`);
     }
 };
 
