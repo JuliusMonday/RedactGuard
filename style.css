@@ -179,6 +179,7 @@ header{
   }
   .redacted-section{
     width: 60%;
+
   }
   .redacted-section h2{
     color: var(--white-color);
@@ -279,6 +280,9 @@ header{
 @media screen and (max-width: 480px) {
     .main-section{
       width: 100%;
+    }
+    .buttons{
+      margin-left: 143px;
     }
   }
 @media screen and (max-width: 320px) {
